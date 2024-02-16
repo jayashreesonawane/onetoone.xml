@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean class="onetoone.xml.dto.Passport" id="pass">
+		<property name="name" value="Jayashree"></property>
+		<property name="address" value="Pune"></property>
+	</bean>
+	<bean class="onetoone.xml.dto.Person" id="per">
+		<property name="name" value="Jayashree"></property>
+		<property name="phone" value="9876543210"></property>
+		<property name="address" value="Pune"></property>
+		<property name="passport" ref="pass"></property>
+	</bean>
+	<bean class="onetoone.xml.dao.PersonDao" id="dao">
+	</bean>
+</beans>
